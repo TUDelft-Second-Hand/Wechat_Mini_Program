@@ -9,16 +9,13 @@ Page({
                   leave: 300
             }, //进入褪出动画时长
             college: JSON.parse(config.data).college.splice(1),
-            steps: [{
+            steps: [
+                  {
                         text: '步骤一',
-                        desc: '扫描isbn码'
+                        desc: '输入物品信息'
                   },
                   {
                         text: '步骤二',
-                        desc: '补充图书信息'
-                  },
-                  {
-                        text: '步骤三',
                         desc: '发布成功'
                   },
             ],
@@ -35,7 +32,6 @@ Page({
                   isbn: '',
                   show_a: true,
                   show_b: false,
-                  show_c: false,
                   active: 0,
                   chooseCollege: false,
                   note_counts: 0,
@@ -46,7 +42,7 @@ Page({
                         id: 0,
                         check: true,
                   }, {
-                        name: '专业',
+                        name: '分类',
                         id: 1,
                         check: false
                   }],
@@ -64,33 +60,7 @@ Page({
       onLoad() {
             this.initial();
       },
-      //手动输入isbn
-      isbnInput(e) {
-            this.data.isbn = e.detail.value;
-      },
-      //打开摄像头扫码isbn
-      scan() {
-            let that = this;
-            wx.scanCode({
-                  onlyFromCamera: false,
-                  scanType: ['barCode'],
-                  success: res => {
-                        wx.showToast({
-                              title: '扫码成功',
-                              icon: 'success'
-                        })
-                        that.setData({
-                              isbn: res.result
-                        })
-                  },
-                  fail() {
-                        wx.showToast({
-                              title: '扫码失败，请重新扫码或者手动输入',
-                              icon: 'none'
-                        })
-                  }
-            })
-      },
+      
       confirm() {
             let that = this;
             let isbn = that.data.isbn;
@@ -308,8 +278,7 @@ Page({
                                           console.log(e)
                                           that.setData({
                                                 show_a: false,
-                                                show_b: false,
-                                                show_c: true,
+                                                show_b: true,
                                                 active: 2,
                                                 detail_id: e._id
                                           });

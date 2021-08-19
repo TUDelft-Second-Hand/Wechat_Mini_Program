@@ -2,7 +2,7 @@
 <view class="top_box">
       <view class="search_box" bindtap="search">
             <image class="search_ico" src="/images/search.png"></image>
-            <view class="search_text">搜索想要的书籍，例如：机械设计</view>
+            <view class="search_text">搜索想要的物品，例如：显示器</view>
       </view>
       <image bindtap="changeCard" class="top_list" src="{{iscard?'/images/list.png':'/images/card.png'}}"></image>
 </view>

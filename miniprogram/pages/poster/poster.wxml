@@ -1,4 +1,4 @@
-  <canvasdrawer painting="{{painting}}" class="canvasdrawer" bind:getImage="eventGetImage"/>
+ <canvasdrawer painting="{{painting}}" class="canvasdrawer" bind:getImage="eventGetImage"/>
 
 <view class="contain" bindtap="preview" data-link="{{shareImage}}">
          <image mode="widthFix" class="shareImage" src="{{shareImage}}"></image>

@@ -1,10 +1,10 @@
 <view class="top_contain">
       <view class="des_contain">
-            <view class="name">许坏</view>
-            <view class="sign">低调做人，高调做事</view>
+            <view class="name">葡萄好大一颗</view>
+            <view class="sign">聒碎乡心梦不成，故园无此声</view>
       </view>
       <view class="avator_box">
-            <image class="avator" src="/images/tou.png"></image>
+            <image class="avator" src="https://avatars.githubusercontent.com/u/19258977?v=4"></image>
       </view>
 </view>
 <view class="contain">
@@ -14,17 +14,17 @@
       </view>
       <view class="title">联系方式</view>
       <view class="description">
-            <view class="tip" bindtap="copy" data-copy="https://github.com/xuhuai66" data-name="链接">
+            <view class="tip" bindtap="copy" data-copy="https://github.com/SkyloveQiu" data-name="链接">
                   <view>Github</view>:
-                  <text>https://github.com/xuhuai66</text>
+                  <text>https://github.com/SkyloveQiu</text>
             </view>
-            <view class="tip" bindtap="copy" data-copy="xuhuai66" data-name="微信">
+            <view class="tip" bindtap="copy" data-copy="SkyloveQiu1999" data-name="微信">
                   <view>Wechat</view>:
-                  <text>xuhuai66</text>
+                  <text>SkyloveQiu1999</text>
             </view>
             <view class="tip" bindtap="copy" data-copy="1604026596" data-name="QQ">
                   <view>QQ</view>:
-                  <text>1604026596</text>
+                  <text>908835754</text>
             </view>
       </view>
 </view>

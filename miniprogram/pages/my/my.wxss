@@ -20,6 +20,14 @@
       font-size: 42rpx;
       letter-spacing: 2rpx;
 }
+.top_1_1_button {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+}
 
 .top_1_2 {
       font-size: 34rpx;

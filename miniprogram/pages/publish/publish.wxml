@@ -10,7 +10,7 @@
                   <view class="b_bar">
                         <view class="b_name">名称</view>
                         <view class="b_plecebox_short">
-                                    <input maxlength="50" placeholder="名称" value="{{place}}" bindinput="placeInput" />
+                                    <input maxlength="50" placeholder="名称" value="{{name}}" bindinput="placeInput" />
                         </view>
                   </view>
                   <view class="b_bar">
@@ -26,7 +26,6 @@
                               </label>
                         </radio-group>
                   </view>
-                  <!--选择专业书时候-->
                   <block wx:if="{{chooseCollege}}">
                         <view class="b_border"></view>
                         <view class="b_bar">
@@ -34,7 +33,7 @@
                               <picker range="{{college}}" range-key="name" value="{{cids}}" bindchange="choCollege">
                                     <view class="b_picker">
                                           <block wx:if="{{cids!==-1}}">当前选择：{{college[cids].name}}</block>
-                                          <block wx:if="{{cids==-1}}">请选择专业</block>
+                                          <block wx:if="{{cids==-1}}">请选择类型</block>
                                           <image class="right" src="/images/right.png" />
                                     </view>
                               </picker>
@@ -61,7 +60,7 @@
                         <view class="b_nobi">※ 非必填</view>
                   </view>
                   <view class="b_notes">
-                        <van-uploader file-list="{{ fileList }}" />
+                        <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" accept="image" max-count="1" bind:delete="delete"/>
                   </view>
                   <view class="b_bar">
                         <view class="name">物品状况</view>

@@ -2,7 +2,6 @@ const app = getApp()
 const db = wx.cloud.database();
 const config = require("../../config.js");
 const _ = db.command;
-import Dialog from '../../vant/dialog/dialog';
 Page({
 
       /**

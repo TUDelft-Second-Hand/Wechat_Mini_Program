@@ -27,6 +27,7 @@ Page({
             let that = this;
             //判断用户是否授权确认
             if (!e.detail.errMsg || e.detail.errMsg != "getPhoneNumber:ok") {
+                  console.log(e.detail.errMsg)
                   wx.showToast({
                         title: '获取手机号失败',
                         icon: 'none'
@@ -128,7 +129,7 @@ Page({
             let campus = that.data.campus;
             if (ids == -1) {
                   wx.showToast({
-                        title: '请先获取您的校区',
+                        title: '请先获取您的地区',
                         icon: 'none',
                         duration: 2000
                   });
@@ -143,18 +144,16 @@ Page({
                   });
                   return false;
             }
-            //校检QQ号
-            let qqnum = that.data.qqnum;
-            if (qqnum !== '') {
-                  if (!(/^\s*[.0-9]{5,11}\s*$/.test(qqnum))) {
-                        wx.showToast({
-                              title: '请输入正确QQ号',
-                              icon: 'none',
-                              duration: 2000
-                        });
-                        return false;
-                  }
+            
+
+            if (wxnum == "") {
+                  wx.showToast({
+                    title: '请输入微信号',
+                    icon : "none",
+                    duration :2000
+                  })
             }
+
             //校检微信号
             let wxnum = that.data.wxnum;
             if (wxnum !== '') {
